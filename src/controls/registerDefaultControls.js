@@ -48,7 +48,7 @@ function registerDefaultControls(controls, element, opts) {
   opts = defaults(opts || {}, defaultOptions);
 
   var controlMethods = {
-    mouseViewDrag: new DragControlMethod(element, 'mouse'),
+    mouseViewDrag: new DragControlMethod(element, 'mouse', opts.mouseViewDrag),
     mouseViewQtvr: new QtvrControlMethod(element, 'mouse'),
     touchView: new DragControlMethod(element, 'touch'),
     pinch: new PinchZoomControlMethod(element, 'touch'),
